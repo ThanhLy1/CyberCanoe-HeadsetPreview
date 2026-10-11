@@ -102,3 +102,9 @@ To produce an installable package from a working Unity project, choose **Tools >
 For source updates, copy the latest `Assets/HeadsetPreview` and its metadata into this repository. Exclude generated `Assets/HeadsetPreview/ProjectSettings` and `ProjectSettings.meta`. Commit and push the updated files through GitHub Desktop.
 
 The add-on export excludes your exhibit, scene content, class CC core scripts, and generated project XR settings. Check the final appearance on the physical wall before presenting in class.
+
+## Author and credits
+
+Created by **Thanh Ly**, a Computer Science master’s student at the **University of Hawaiʻi at Mānoa**.
+
+CyberCANOE development library by [UH Mānoa LAVA](https://github.com/uhmlavalab/CyberCANOE).

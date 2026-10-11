@@ -154,6 +154,14 @@ Share Artifacts/CyberCanoe-HeadsetPreview-Unity.zip. The exporter includes only
 Assets/HeadsetPreview tools/materials/docs/calibration, excluding any generated
 project XR settings. It does not export your scene or content.
 
+AUTHOR AND CREDITS
+
+Created by Thanh Ly, a Computer Science master’s student at the
+University of Hawaiʻi at Mānoa.
+
+CyberCANOE development library by UH Mānoa LAVA:
+https://github.com/uhmlavalab/CyberCANOE
+
 Meta Link / Unity Play mode:
 https://developers.meta.com/vr/documentation/unity/unity-link/
 Unity asset packages:

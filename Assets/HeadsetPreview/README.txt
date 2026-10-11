@@ -11,6 +11,10 @@ The setup tool connects to the Cyber Canoe cameras already in your scene.
 BEFORE IMPORT
 
 Use your class's Cyber Canoe Unity project with Universal Render Pipeline (URP).
+The base CyberCANOE development library is provided by UH Manoa's LAVA lab:
+https://github.com/uhmlavalab/CyberCANOE
+Follow your instructor's library setup instructions before installing this add-on.
+
 This project uses Unity 6000.3.9f1. The class's Cyber Canoe package must already
 be installed: CC_CAMERA_SETUP, CC_CAMERAOFFSET, CC_SETTINGS and CC_CANVAS_SETUP
 are required. This add-on leaves those source files and their GUIDs alone.

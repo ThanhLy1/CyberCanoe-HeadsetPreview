@@ -8,7 +8,9 @@ This is an add-on for your existing class Unity project. It includes the headset
 
 Use a Windows PC with a headset connected through Meta Quest Link or SteamVR, and a Cyber Canoe Unity project using Universal Render Pipeline (URP). Quest preview runs through the PC connection; this add-on does not configure standalone Android Quest builds.
 
-The class's Cyber Canoe package must already provide `CC_CAMERA_SETUP`, `CC_CAMERAOFFSET`, `CC_SETTINGS`, and `CC_CANVAS_SETUP`.
+The base [CyberCANOE development library](https://github.com/uhmlavalab/CyberCANOE) is provided by UH Manoa's LAVA lab. Start with your class's Cyber Canoe project and follow your instructor's library setup instructions before installing this add-on.
+
+Your project must already provide `CC_CAMERA_SETUP`, `CC_CAMERAOFFSET`, `CC_SETTINGS`, and `CC_CANVAS_SETUP`.
 
 The authoring project uses Unity **6000.3.9f1**. For Meta Quest PC preview, install XR Plugin Management and Unity OpenXR Meta if they are missing:
 
@@ -46,7 +48,13 @@ You can also import an exported `.unitypackage` through **Assets > Import Packag
 
 1. Open your own Cyber Canoe scene containing `CC_HUB`, `CC_HEAD`, and its left/right cameras. Both cameras must use the same projection screen through `CC_CAMERAOFFSET`.
 2. Choose **Tools > Cyber Canoe > Set Up Headset Preview for Current Scene**. This creates or reuses the headset simulator and configures the installed desktop OpenXR packages. It preserves your scene's existing screen and viewer calibration.
-3. Choose **Tools > Cyber Canoe > Apply LAVA LED Wall Calibration (Keller 102)**. This applies the supplied wall and viewer measurements to the rig and headset room in the current scene. The change supports Undo.
+
+   [![Tools menu with Cyber Canoe and Set Up Headset Preview for Current Scene selected](docs/images/tool-setup-headset-step-1-menu.png)](docs/images/tool-setup-headset-step-1.png)
+
+3. Choose **Tools > Cyber Canoe > Apply LAVA LED Wall Calibration (Keller 102)**. This applies the supplied wall and viewer measurements to the rig and headset room in the current scene. You can also use the matching calibration button in the simulator Inspector. The change supports Undo.
+
+   [![Tools menu with Cyber Canoe and Apply LAVA LED Wall Calibration for Keller 102 selected](docs/images/tool-setup-headset-step-2-menu.png)](docs/images/tool-setup-headset-step-2.png)
+
 4. Save your scene.
 5. Connect your headset through Meta Quest Link or SteamVR and select that application's OpenXR runtime.
 6. Press **Play** and put on the headset. If the starting view needs resetting, select `CyberCanoe_HeadsetSimulator` and click **Recenter Viewer at Calibrated Position** in its Inspector.

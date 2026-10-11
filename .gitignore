@@ -1,0 +1,24 @@
+# Unity-generated caches and local files
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+/Artifacts/
+.vs/
+.idea/
+*.csproj
+*.sln
+*.suo
+*.user
+*.userprefs
+Thumbs.db
+.DS_Store
+
+# Generated desktop XR settings belong to each student's Unity project.
+/Assets/HeadsetPreview/ProjectSettings/
+/Assets/HeadsetPreview/ProjectSettings.meta
+
+# Preserve all other Unity .meta files.

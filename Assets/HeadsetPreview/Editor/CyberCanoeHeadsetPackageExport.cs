@@ -50,6 +50,7 @@ public static class CyberCanoeHeadsetPackageExport
             "    \"com.unity.render-pipelines.universal\": \"17.3.0\",\n" +
             "    \"com.unity.ugui\": \"2.0.0\",\n" +
             "    \"com.unity.xr.management\": \"4.7.0\",\n" +
+            "    \"com.unity.xr.meta-openxr\": \"2.6.1\",\n" +
             "    \"com.unity.xr.openxr\": \"1.18.0\"\n" +
             "  }\n}\n", new UTF8Encoding(false));
 

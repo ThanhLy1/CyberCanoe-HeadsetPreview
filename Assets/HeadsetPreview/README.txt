@@ -15,29 +15,25 @@ This project uses Unity 6000.3.9f1. The class's Cyber Canoe package must already
 be installed: CC_CAMERA_SETUP, CC_CAMERAOFFSET, CC_SETTINGS and CC_CANVAS_SETUP
 are required. This add-on leaves those source files and their GUIDs alone.
 
-You must install the Unity XR packages yourself before importing this add-on.
-They are not included in the .unitypackage and are not installed by the setup
-tool. XR Plug-in Management starts the headset provider; OpenXR connects Unity
-to the headset runtime so it can display stereo images and track your head.
+Install the XR packages through Package Manager before importing this add-on.
+The add-on does not bundle them or install them through its setup tool.
 
-1. Open Window > Package Management > Package Manager. Use Install package by
-   name to install each missing XR package. This project uses:
-     XR Plug-in Management: com.unity.xr.management    4.7.0
-     OpenXR Plugin:         com.unity.xr.openxr        1.18.0
-   Install XR Plug-in Management first, then OpenXR Plugin. If they are already
-   installed, check their versions. OpenXR also installs its package
-   dependencies, including Input System. Wait for installation to finish.
-   Check the XR Plug-in Management and Input System versions separately.
+1. Open Window > Package Management > Package Manager. For Meta Quest PC
+   preview, add these two packages if they are missing:
+     XR Plugin Management: com.unity.xr.management
+     Unity OpenXR Meta:    com.unity.xr.meta-openxr (2.6.1 used here)
+   Let Unity resolve compatible versions and finish installing dependencies.
+   Meta brings in OpenXR, which brings in Input System. XR Management can
+   update to satisfy these dependencies. Unity documents automatic installation:
+   https://docs.unity3d.com/Packages/com.unity.xr.meta-openxr@2.6/manual/install.html
 
-   Your class project should already contain URP, uGUI and Input System. The
-   versions used here are URP 17.3.0, uGUI 2.0.0 and Input System 1.18.0; install
-   any missing packages by name:
-     com.unity.render-pipelines.universal
-     com.unity.ugui
-     com.unity.inputsystem
-   The exported ZIP's REQUIRED-PACKAGES.json lists these five versions for reference.
-   Keep the project's other packages; do not replace its Packages/manifest.json
-   with this dependency list.
+   Keep the class project's existing URP and Unity UI packages and settings.
+   The versions installed here are URP 17.3.0, uGUI 2.0.0 and Input System 1.18.0.
+   REQUIRED-PACKAGES.json in the exported ZIP is a reference list of packages
+   used here, including dependencies; keep your project's Packages/manifest.json.
+
+   For a SteamVR-only setup, install XR Plugin Management and OpenXR Plugin
+   (com.unity.xr.openxr); the Meta-specific extension package is optional.
 2. Under Edit > Project Settings > Player > Other Settings, set Active Input
    Handling to Input System Package (New) or Both. Restart Unity if prompted.
 3. Use Assets > Import Package > Custom Package to import

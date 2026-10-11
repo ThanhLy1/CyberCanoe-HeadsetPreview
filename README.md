@@ -10,17 +10,25 @@ Use a Windows PC with a headset connected through Meta Quest Link or SteamVR, an
 
 The class's Cyber Canoe package must already provide `CC_CAMERA_SETUP`, `CC_CAMERAOFFSET`, `CC_SETTINGS`, and `CC_CANVAS_SETUP`.
 
-The authoring project uses Unity **6000.3.9f1** with these installed packages:
+The authoring project uses Unity **6000.3.9f1**. For Meta Quest PC preview, install XR Plugin Management and Unity OpenXR Meta if they are missing:
 
-| Package | Package Manager name | Reference version |
-| --- | --- | --- |
-| XR Plug-in Management | `com.unity.xr.management` | `4.7.0` |
-| OpenXR Plugin | `com.unity.xr.openxr` | `1.18.0` |
-| Input System | `com.unity.inputsystem` | `1.18.0` |
-| Universal Render Pipeline | `com.unity.render-pipelines.universal` | `17.3.0` |
-| Unity UI | `com.unity.ugui` | `2.0.0` |
+1. Open **Window > Package Management > Package Manager**.
 
-In **Window > Package Management > Package Manager**, install any missing packages by name before importing the add-on. Keep your class project's existing packages and URP settings. The reference list in [REQUIRED-PACKAGES.json](REQUIRED-PACKAGES.json) is not a replacement for your project's `Packages/manifest.json`.
+   ![Unity Window menu showing Package Management and Package Manager](docs/images/window-package-step-1.png)
+
+2. Select **Unity Registry**, choose **XR Plugin Management** (`com.unity.xr.management`), and click **Install**. Wait for installation to finish.
+
+   ![XR Plugin Management selected in Unity Registry with its Install button visible](docs/images/window-package-step-2.png)
+
+3. Search for **meta**, select **Unity OpenXR Meta** (`com.unity.xr.meta-openxr`), and click **Install**. Wait for Unity to finish installing its dependencies.
+
+   ![Unity Registry search for meta showing Unity OpenXR Meta 2.6.1 and its Install button](docs/images/window-package-step-3.png)
+
+Use Unity OpenXR Meta **2.6.1** and let Unity resolve compatible versions and finish installing dependencies. Meta brings in OpenXR, which brings in Input System. XR Management can update to satisfy these dependencies. Unity's [Meta package installation guide](https://docs.unity3d.com/Packages/com.unity.xr.meta-openxr@2.6/manual/install.html) describes automatic dependency installation.
+
+Keep your class project's existing URP and Unity UI packages and settings. The installed versions here are URP 17.3.0, Unity UI 2.0.0, and Input System 1.18.0. [REQUIRED-PACKAGES.json](REQUIRED-PACKAGES.json) records reference versions, including dependencies; keep your project's existing `Packages/manifest.json`.
+
+For a **SteamVR-only setup**, install XR Plugin Management and OpenXR Plugin (`com.unity.xr.openxr`); the Meta-specific extension package is optional.
 
 Under **Edit > Project Settings > Player > Other Settings**, set **Active Input Handling** to **Input System Package (New)** or **Both**, and restart Unity if prompted.
 
@@ -42,6 +50,10 @@ You can also import an exported `.unitypackage` through **Assets > Import Packag
 6. Press **Play** and put on the headset. If the starting view needs resetting, select `CyberCanoe_HeadsetSimulator` and click **Recenter Viewer at Calibrated Position** in its Inspector.
 
 Running setup again reuses the existing simulator. You do not need a separate Add Simulator step or a campus calibration preset. Keep global **Initialize XR on Startup** disabled; the simulator controls XR startup.
+
+In **Edit > Project Settings > XR Plug-in Management**, select the **Windows, Mac, Linux** desktop tab. Check that **OpenXR** is enabled and **Initialize XR on Startup** is unchecked; the setup tool configures these two options. To match the pictured Quest configuration, also enable the **Meta Quest** feature group manually.
+
+![Desktop XR Plug-in Management settings showing OpenXR and the Meta Quest feature group enabled, with Initialize XR on Startup unchecked](docs/images/window-package-step-4.png)
 
 Your existing scene navigation still controls the Cyber Canoe content. Head movement changes your view of the virtual wall; this add-on does not add controller movement or pointer interaction.
 

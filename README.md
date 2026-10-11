@@ -12,17 +12,19 @@ The class's Cyber Canoe package must already provide `CC_CAMERA_SETUP`, `CC_CAME
 
 The authoring project uses Unity **6000.3.9f1**. For Meta Quest PC preview, install XR Plugin Management and Unity OpenXR Meta if they are missing:
 
+Click any screenshot to open the full-size original.
+
 1. Open **Window > Package Management > Package Manager**.
 
-   ![Unity Window menu showing Package Management and Package Manager](docs/images/window-package-step-1.png)
+   [![Unity Window menu showing Package Management and Package Manager](docs/images/window-package-step-1-menu.png)](docs/images/window-package-step-1.png)
 
 2. Select **Unity Registry**, choose **XR Plugin Management** (`com.unity.xr.management`), and click **Install**. Wait for installation to finish.
 
-   ![XR Plugin Management selected in Unity Registry with its Install button visible](docs/images/window-package-step-2.png)
+   [![XR Plugin Management selected in Unity Registry with its Install button visible](docs/images/window-package-step-2.png)](docs/images/window-package-step-2.png)
 
 3. Search for **meta**, select **Unity OpenXR Meta** (`com.unity.xr.meta-openxr`), and click **Install**. Wait for Unity to finish installing its dependencies.
 
-   ![Unity Registry search for meta showing Unity OpenXR Meta 2.6.1 and its Install button](docs/images/window-package-step-3.png)
+   [![Unity Registry search for meta showing Unity OpenXR Meta 2.6.1 and its Install button](docs/images/window-package-step-3.png)](docs/images/window-package-step-3.png)
 
 Use Unity OpenXR Meta **2.6.1** and let Unity resolve compatible versions and finish installing dependencies. Meta brings in OpenXR, which brings in Input System. XR Management can update to satisfy these dependencies. Unity's [Meta package installation guide](https://docs.unity3d.com/Packages/com.unity.xr.meta-openxr@2.6/manual/install.html) describes automatic dependency installation.
 
@@ -53,7 +55,7 @@ Running setup again reuses the existing simulator. You do not need a separate Ad
 
 In **Edit > Project Settings > XR Plug-in Management**, select the **Windows, Mac, Linux** desktop tab. Check that **OpenXR** is enabled and **Initialize XR on Startup** is unchecked; the setup tool configures these two options. To match the pictured Quest configuration, also enable the **Meta Quest** feature group manually.
 
-![Desktop XR Plug-in Management settings showing OpenXR and the Meta Quest feature group enabled, with Initialize XR on Startup unchecked](docs/images/window-package-step-4.png)
+[![Desktop XR Plug-in Management settings showing OpenXR and the Meta Quest feature group enabled, with Initialize XR on Startup unchecked](docs/images/window-package-step-4.png)](docs/images/window-package-step-4.png)
 
 Your existing scene navigation still controls the Cyber Canoe content. Head movement changes your view of the virtual wall; this add-on does not add controller movement or pointer interaction.
 
